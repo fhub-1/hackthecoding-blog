@@ -1,15 +1,17 @@
+import Head from 'next/head'
 import Header from '../sections/Header'
 import Layout from '../sections/Layout';
 
 export default function Home() {
   return (
-    <> 
-      
-    <section className="flex flex-column justify-center items-center space-y-10 mt-12 sm:mt-24 md:mt-32">
-    <Layout pageMeta={{
-      title: 'Hack the coding',
-      description: 'Hack the coding blog platform'
-    }}>
+    <>
+    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <Head>
+        <title>Hack the coding Blog</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+    </div>
+    <Layout>
       {/* Hero sections */}
       <div className="space-y-4 max-w-4xl mx-auto text-center"> 
         <h1 className="text-4xl sm:text-7xl font-bold capitalize">
@@ -22,7 +24,6 @@ export default function Home() {
         <button  type="button"  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Start your blog for free</button>
       </div>
     </Layout>
-    </section>
     </>
   )
 }

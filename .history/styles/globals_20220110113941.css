@@ -8,7 +8,5 @@
      @apply min-h-screen;
     }
 
-    ::selection{
-        @apply text-white bg-blue-600;
-    }
+    
 }
